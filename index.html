@@ -3,8 +3,31 @@
   <head>
     <style type = "text/css">
             div{
-                margin : 120px 48px 48px 120px;}
-            body {background-color: rgb(190, 222, 255);}
+                margin : 60px 48px 48px 120px;}
+            h1 + h5 {
+              margin-top: 16px;}
+            a{
+                margin : 0px 48px 0px 120px;}
+            table.table{
+               width: calc(100% - 240px);
+               margin: 32px 120px 0 120px;
+                max-width: none;
+           } 
+            .navbar-toggler{
+                margin-right: 120px;}
+
+            ul.nav-pills{
+             padding-top: 0.25rem;}
+            div+.nav-pills .nav-link.active {
+              color: #fff;
+              background-color: #073b0e;
+              border-radius: 0.5rem;}
+            div+.nav-pills .nav-link{
+              color:#073b0e;
+            }
+            td:nth-child(1) code{
+              color:#00bb19;
+            }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +35,266 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
-    <div>
-      <h1>html5 태그들을 무더보쟈!</h1>
-        <p>HTML5는 단순히 "보여주는 것"을 넘어, 웹브라우저와 검색 엔진에게 데이터의 '의미'를 정확히 전달하고, 복잡한 기능을 태그 하나로 해결하려는 방향으로 진화했습니다.</p>
+    <nav class="navbar" style="background-color: #eafff2;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Web programming</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HTML</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CSS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Java Script</a>
+              </li>
+            </ul>
+          </div>
+        
+      </div>
+    </nav>
+  
+    
+    <div class="card" style="background-color: #f0f0f0; border-radius: 12px; margin: 60px 48px 48px 120px;">
+      <div class="card-body">
+        <h1>html5 태그들을 무더보쟈!</h1>
+        <h5>HTML5는 단순히 "보여주는 것"을 넘어, 웹브라우저와 검색 엔진에게 데이터의 '의미'를 정확히 전달하고, 복잡한 기능을 태그 하나로 해결하려는 방향으로 진화했습니다.</h5>
+      </div>
     </div>
+    
+    <div class="content1" style="margin-top: 120px;">
+      <h4>1. HTML5의 주요 시맨틱 태그</h4>
+      <h6>웹페이지의 레이아웃을 만들 때 사용하며, 검색 엔진이 사이트 구조를 파악하는 데 아주 큰 도움을 줍니다.</h6></div>
+
+    <table class="table">
+      <thead class>
+        <tr>
+          <th scope="col">태그</th>
+          <th scope="col">설명</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          
+          <td><code>&lt;header&gt;</code></td>
+          <td>페이지나 섹션의 머릿말 (로고,메뉴 등)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;main&gt;</code></td>
+          <td>문서의 핵심 콘텐츠 (페이지당 한 번만 사용 권장)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;nav&gt;</code></td>
+          <td>네비게이션 링크의 집합 (메뉴 바)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;section&gt;</code></td>
+          <td>문서의 일반적인 섹션 (주제별 그룹화)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;article&gt;</code></td>
+          <td>문서의 독립적인 콘텐츠 (블로그 게시물, 뉴스 기사 등)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;aside&gt;</code></td>
+          <td>주요 내용 외의 사이드바 (광고, 링크 등)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;footer&gt;</code></td>
+          <td>페이지나 섹션의 바닥글 (저작권, 연락처 등)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content2" style="margin-top: 180px;">
+      <h4>2. 텍스트 및 콘텐츠 태그</h4>
+      <h6>가장 기본이 되는 글자 관련 태그들입니다.</h6></div>
+
+    <table class="table">
+      <thead class>
+        <tr>
+          <th scope="col">용도</th>
+          <th scope="col">설명</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          
+          <td>제목</td>
+          <td><code>&lt;h1&gt;</code>부터 <code>&lt;h6&gt;</code>까지 사용하며 숫자가 작을수록 중요도가 높습니다.</td>
+        </tr>
+        <tr>
+          
+          <td>본문</td>
+          <td><code>&lt;p&gt;</code>(단락), <code>&lt;br&gt;</code>(줄바꿈), <code>&lt;span&gt;</code>(줄 내부 범위)</td>
+        </tr>
+        <tr>
+          
+          <td>강조</td>
+          <td><code>&lt;strong&gt;</code>(중요한 의미의 굵게), <code>&lt;em&gt;</code>(강조하는 기울임)</td>
+        </tr>
+        <tr>
+          
+          <td>목록</td>
+          <td><code>&lt;ul&gt;</code>+<code>&lt;li&gt;</code>:순서 없는 목록 (점), <code>&lt;ol&gt;</code>+<code>&lt;li&gt;</code>:순서 있는 목록 (숫자)
+          </td>
+        </tr>
+        <tr>
+          
+          <td>링크</td>
+          <td><code>&lt;a href="URL"&gt;</code> (태그를 사용하여 다른 페이지나 웹사이트로 연결)</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div class="content3" style="margin-top: 180px;">
+      <h4>3. 멀티미디어 태그</h4>
+      <h6>HTML5에서 가장 강력해진 부분으로, 별도의 플러그인 없이 미디어를 재생할 수 있습니다.</h6></div>
+
+    <table class="table">
+      <thead class>
+        <tr>
+          <th scope="col">태그</th>
+          <th scope="col">설명</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          
+          <td><code>&lt;img&gt;</code></td>
+          <td>이미지 삽입</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;video&gt;</code></td>
+          <td>동영상 재생 (controls 속성으로 재생 바 표시 가능)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;audio&gt;</code></td>
+          <td>오디오 재생</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;canvas&gt;</code></td>
+          <td>자바스크립트를 이용해 그래픽이나 애니메이션을 그릴 때 사용</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;svg&gt;</code></td>
+          <td>벡터 그래픽을 정의하는 데 사용</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div class="content4" style="margin-top: 180px;">
+      <h4>4. 폼(Form) 및 입력 태그</h4>
+      <h6>사용자로부터 데이터를 입력받을 때 사용합니다. HTML5에서는 입력 타입이 훨씬 다양해졌어요.</h6></div>
+
+    <table class="table">
+      <thead class>
+        <tr>
+          <th scope="col">태그</th>
+          <th scope="col">설명</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          
+          <td><code>&lt;input&gt;</code></td>
+          <td>다양한 타입을 가집니다.(type="text", password, email, number 등)</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;datalist&gt;</code></td>
+          <td>입력창에 추천 검색어 리스트를 보여줍니다.</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;button&gt;</code></td>
+          <td>클릭 가능한 버튼을 생성합니다.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <div class="content5" style="margin-top: 180px;">
+      <h4>5. 표(Table) 태그</h4>
+      <h6>데이터를 표 형태로 나타낼 때 사용합니다.</h6></div>
+
+    <table class="table">
+      <thead class>
+        <tr>
+          <th scope="col">태그</th>
+          <th scope="col">설명</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr>
+          
+          <td><code>&lt;table&gt;</code></td>
+          <td>데이터를 표 형태로 나타냅니다.</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;tr&gt;</code></td>
+          <td>표의 행을 정의합니다.</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;th&gt;</code></td>
+          <td>표의 헤더 셀을 정의합니다.</td>
+        </tr>
+        <tr>
+          
+          <td><code>&lt;td&gt;</code></td>
+          <td>표의 데이터 셀을 정의합니다.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    
+
+
+    <div>
+    <h5 style="margin-top: 300px;">더 공부하러 가기</h5></div> 
+
+    <div class="row row-cols-2">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">상호작용 및 UI 관련 태그</h5>
+            <p class="card-text">별도의 스크립트 없이 클릭으로 열고 닫거나 창을 띄울 수 있는 태그들입니다.</p>
+            <a href="#" class="btn btn-primary">Go study</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">데이터 시각화 및 측정 태그</h5>
+            <p class="card-text">진행률이나 수치를 시각적으로 나타낼 때 유용합니다.</p>
+            <a href="#" class="btn btn-primary">Go study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
+
